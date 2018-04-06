@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<base href="http://www.nandoquintana.com/press/2005sepln/" />
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>OAC-onto: Open Archive Cataloger, ontologías y metadatos</title>
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.0" />
+<meta name="presdate" content="20050625" />
+<meta name="author" content="Nando Quintana Hernández" />
+<meta name="company" content="Grupo DELi (Universidad de Deusto)" />
+<link rel="stylesheet" href="ui/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="ui/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="ui/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="currentSlide"></div>
+<div id="header"><div id="logo"></div></div>
+<div id="footer">
+<h1>Grupo DELi &#8226; OAC-onto: </h1>
+<h2>Open Archive Cataloguer, ontologies &amp; metadata</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+<div class="presentation">
+
+
+<div class="slide">
+<h1>OAC-onto: <br/>Open Archive Cataloguer, <br/>ontologies and metadata</h1>
+<h4>Inés Jacob Taquet, Joseba Abaitua, JosuKa Díaz, <br/>Fernando Quintana, Jon Fernández, Txus Sánchez</h4>
+<h3><a href="http://www.deli.deusto.es/">Grupo DELi</a></h3>
+</div>
+
+
+
+<div class="slide">
+<h1>Índice</h1>
+<ul>
+<li>Objetivo general del proyecto</li>
+<li>Motivación del proyecto</li>
+<li>Antecedentes</li>
+<li>Solución propuesta</li>
+<li>Zope</li>
+<li>OAI-PMH</li>
+<li>zOAC</li>
+<li>Trabajos futuros</li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>Objetivo general del proyecto</h1>
+<ul>
+  <li>Agente de catalogación</li>
+  <li>Productores y usuarios de contenidos</li>
+  <li>Tareas de creación, actualización y consumo</li>
+  <li>Catálogos abiertos (Open Archives)</li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>Motivación del proyecto</h1>
+<ul>
+  <li>Mejorar la gestión de metadatos documentales para grandes corpora de textos multilingües 
+      y permitir su almacenamiento en repositorios distribuidos (DELi)</li>
+  <li>Aportar soluciones para la normalización de criterios de catalogación (DELi + CodeSyntax)</li>
+  <li>Difundir entre los agentes involucrados las bondades de compartir metadatos (DELi + CS)</li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>Antecedentes</h1>
+<ul>
+  <li>SareBi, el gestor de objetos documentales multilingües
+    <ul>
+      <li>publicación web de corporas multilingües alineados</li>
+      <li>exportación de metadatos TEI</li>
+      <li>administración de memorias de traducción en TMX</li>
+    </ul>
+  </li>
+  <li>X-Flow, gestión de workflow de contenidos multilingües
+    <ul>
+      <li>publicación web de contenidos multilingües</li>
+      <li>control de versiones y workflows de publicación y traducción</li>
+      <li>exportación de metadatos TEI, TMX y XLIFF</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>Solución propuesta</h1>
+<ul>
+  <li>Gestor de corpora multilingües (SareBi 2.0)
+    <ul>
+      <li>basada en objetos documentales Zope</li>
+      <li>corpus, document, language, paragraph</li>
+      <li>bibliographicReference, etc.</li>
+    </ul>
+  </li>
+  <li>Gestión de metadatos
+    <ul>
+      <li>soporte para los lenguajes TEI, Dublin Core, BibTex, MarcxML</li>
+    </ul>
+  </li>
+  <li>Publicación Web Semántica
+    <ul>
+      <li>Metadatos RDF</li>
+      <li>Ontologías documentales</li>
+    </ul>
+  </li>
+  <li>Implementación de un escenario OAI-PMH
+    <ul>
+      <li>Protocolo de intercambio de catálogos</li>
+      <li>Diseminación y recolección de metadatos</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>Zope (I)</h1>
+<ul>
+  <li>Z Object Publishing Environment = 
+    <ul>
+      <li>programación orientada a objetos (Python)</li>
+      <li>+ persistencia de objetos</li>
+      <li>+ acceso remoto a los objetos (http, ftp, xml-rpc, etc.)</li>
+    </ul>
+  </li>
+  <li>Zope Publication License <img src="pix/zope_comunity_logo.gif" /></li>
+  <li>
+    Un sitio web Zope está compuesto por objetos (Z objects) en lugar de ficheros de texto (ej:php)
+  </li>
+  <li>
+    Los objetos más básicos que ofrece Zope son: 
+    <ul>
+      <li><img src="pix/folder_icon.gif"/> carpetas, <img src="pix/dtml_icon.gif"/> documentos, <img src="pix/image_icon.gif"/> imagenes, <br/><img src="pix/zpt_icon.gif"/> plantillas, etc.
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>Zope (II)</h1>
+<ul>
+  <li>Existen multitud de productos que permiten utilizar nuevos tipos de objetos, por ejemplo:
+    <ul>
+      <li><img src="pix/zwiki_icon.gif"/> un wiki (Zwiki), <img src="pix/coreblog_icon.gif"/> un web log (CoreBlog), <br/><img src="pix/plone_icon.gif"/> un portal (Plone), etc.</li>
+    </ul>
+  </li>
+  <li>Nuestra aportación es otro nuevo producto llamado zOAC 
+  <li><img src="pix/zoac_icon.png"/> zOAC, también es de libre distribución y se encuentra disponible en <img src="pix/sflogo.png"/> en la url:<br/><br/>http://sourceforge.net/projects/zoac/</li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>Zope (III)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zope_listado_zoac.png" />
+</div>
+
+
+
+<div class="slide">
+<h1>OAI-PMH (I)</h1>
+<ul>
+  <li>Open Archive Initiative - Protocol for Metadata Harvesting</li>
+  <li>Service Provider (recolecta metadatos)
+    <ul>
+      <li>interroga al Data Provider sobre sus metadatos</li>
+      <li>mediante un API (verbs) y el protocolo http</li>
+    </ul>
+  </li>
+  <li>Data Provider (disemina metadatos)</li>
+    <ul>
+      <li>responde a las peticiones del Service Provider</li>
+      <li>envía los metadatos en formato XML, sobre el protocolo http</li>
+    </ul>
+  </li>
+  <li>http://bazar.deli.deusto.es/AboutUs/Publications/oai<br/>?verb=ListRecords&metadata_prefix=oai_dc</li>
+  <li>Identify, ListMetadataFormats, ListSets, ListIdentifiers, ListRecords y GetRecord.</li>  
+</ul>
+</div>
+
+
+
+<div class="slide">
+<h1>OAI-PMH (II)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/oai_1.png" />
+</div>
+
+
+
+<div class="slide">
+<h1>OAI-PMH (III)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/oai_2.png" />
+</div>
+
+
+
+<div class="slide">
+<h1>OAI-PMH (IV)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/oai_3.png" />
+</div>
+
+
+
+<div class="slide">
+<h1>OAI-PMH (V)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/oai_4.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (I)</h1>
+<ul>
+  <li>Permite crear un escenario OAI-PMH completo
+    <ul>
+      <li>DynamicDataProvider, DinamicRepositoryGateway, ServiceProvider (y dentro Subscription y StaticSubscription), etc.</li>
+      <li>Desarrollo basado en el producto ZOpenArchives de Pentilla (www.pentila.com)</li>
+    </ul>
+  </li>
+  <li>DynamicDataProvider
+    <ul>
+      <li>BibliographicReference (gestión de metadatos)</li> 
+      <li>Document</li>
+        <ul>
+          <li>Language
+            <ul>
+              <li>Paragraph</li>
+            </ul>
+          </li>
+        </ul>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>zOAC (II)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_1.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (III)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_2.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (IV)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_3.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (V)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_4.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (VI)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_5.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (VII)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_6.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (VIII)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_7.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (IX)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_8.png" />
+</div>
+
+
+<div class="slide">
+<h1>zOAC (X)</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="pix/zoac_9.png" />
+</div>
+
+
+<div class="slide">
+<h1>Trabajos futuros</h1>
+<ul>
+  <li>Inferencia automática de ontologías a partir de una folcsonomía
+    <ul>
+      <li>explotación de la metadatación en colaboración</li>
+      <li>(del.icio.us, tagzania.com, citeulike.com)</li>
+    </ul>
+  </li>
+  <li>Clasificación automática por temas y <em>categorías pragmáticas</em>
+    <ul>
+      <li>(género, función comunicativa, etc.)</li>
+      <li>contenido, estructura retórica y otros metadatos</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+</div>
+
+</body>
+</html>

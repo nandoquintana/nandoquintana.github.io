@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+<base href="http://www.nandoquintana.com/press/2005kopyleft/" />
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+
+<title>Publicación de contenidos digitales con Zope</title>
+
+<meta name="generator" content="S5" />
+
+<meta name="version" content="S5 1.0" />
+
+<meta name="presdate" content="20050625" />
+
+<meta name="author" content="Nando Quintana Hernández" />
+
+<meta name="company" content="ESIDE's GNU Hi-tech and Open Source Team" />
+
+<link rel="stylesheet" href="ui/slides.css" type="text/css" media="projection" id="slideProj" />
+
+<link rel="stylesheet" href="ui/opera.css" type="text/css" media="projection" id="operaFix" />
+
+<link rel="stylesheet" href="ui/print.css" type="text/css" media="print" id="slidePrint" />
+
+<script src="ui/slides.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+
+<div id="header"><div id="logo"></div></div>
+
+<div id="footer">
+
+<h1>III Jornadas Copyleft &#8226; Donostia 25.06.2005</h1>
+
+<h2>Publicación de contenidos digitales con Zope</h2>
+
+<div id="controls"></div>
+
+</div>
+
+
+
+</div>
+
+<div class="presentation">
+
+
+
+
+<div class="slide">
+
+<h1>Publicación 
+de contenidos digitales 
+con Zope</h1>
+
+<h3>Nando Quintana Hernández</h3>
+
+<h4><a href="http://nando.trapagaran.org/">nando (arroba) trapagaran (punto) org</a></h4>
+
+</div>
+
+
+
+<div class="slide">
+
+<h1>??? :-)</h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pix/rallada.gif" />
+</div>
+
+
+
+<div class="slide">
+
+<h1>??? :-)</h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pix/frink.jpg" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pix/ralph.jpg" />
+</div>
+
+
+
+
+<div class="slide">
+
+<h1>??? :-)</h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pix/no_frink.jpg" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pix/ralph.jpg" />
+</div>
+
+
+
+
+<div class="slide">
+
+<h1>Índice</h1>
+
+<ul>
+
+<li>Introducción a Zope</li>
+
+<li>Cómo crear un wiki con Zope: Zwiki</li>
+
+<li>Cómo crear un weblog con Zope: CoreBlog</li>
+
+<li>Cómo crear un portal con Zope: Plone</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+<div class="slide">
+
+<h1>Introducción a Zope</h1>
+
+<ul>
+
+<li>¿Qué es Zope?
+  <ul>
+    <li>Plataforma para crear aplicaciones web
+      <ul>
+        <li>(interfaz de usuario = páginas web)</li>
+      </ul>
+    </li>
+    <li>Está escrito en Python</li>
+    <li>Publicado bajo una licencia libre: 
+      <ul>
+        <li>Zope Public License (<a href="http://www.zope.org/Resources/License/">http://www.zope.org/Resources/License/</a>)</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li><a href="http://www.zope.org">http://www.zope.org</a></li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pix/zope_comunity_logo.gif" />
+</ul>
+
+</div>
+
+
+
+
+<div class="slide">
+
+<h1>Introducción a Zope</h1>
+
+<ul>
+
+<li>Z Object Publishing Environment = 
+  <ul>
+    <li>programación orientada a objetos (Python)</li>
+    <li>+ persistencia de objetos</li>
+    <li>+ acceso remoto a los objetos (http, ftp, xml-rpc, etc.)</li>
+  </ul>
+</li>
+<li>Se le suele achacar una larga curva de aprendizaje</li>
+</ul>
+
+</div>
+
+
+
+<div class="slide">
+
+<h1>Introducción a Zope</h1>
+
+<ul>
+
+<li>Incluye:
+  <ul>
+    <li>interfaz de administración web (ZMI)</li>
+    <li>una base de datos OO transaccional</li>
+    <li>un servidor (web, ftp, xml-rpc, webdav)</li>
+  </ul>
+</li>
+<li>Permite:
+  <ul>
+    <li>fácil recuperación frente a errores</li>
+    <li>acceso a los recursos de forma concurrente</li>
+  </ul>
+</li>
+</ul>
+
+</div>
+
+
+
+<div class="slide">
+
+<h1>Introducción a Zope</h1>
+
+<ul>
+  <li>En 1996, Jim Fulton de Digital Creations ideó el nucleo de Zope</li>
+  <li>Se desarrolla una aplicación comercial llamada 'Principia'</li>
+  <li>En 1998 se libera su código bajo el nombre de 'Zope'</li>
+  <ul>
+    <li>1999 - Simon Michel - Zwiki</li>
+    <li>2002 - Alexander Limi, Alan Runyan y Vidar Andersen - Plone</li>
+    <li>2003 - Atsushi Shibata - CoreBlog</li>
+  </ul>
+
+</ul>
+</div>
+
+
+
+
+<div class="slide">
+
+<h1>Introducción a Zope</h1>
+
+<ul>
+  <li>Zope está diseñado para delegar, de forma segura, el control de un sitio web a diferentes grupos de usuarios</li>
+  <li>Se puede administrar de forma remota utilizando un navegador web.
+    <ul>
+      <li>se parece mucho a un administrador de ficheros (ej:nautilus, Hasefroch explorer)</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+
+<h1>Introducción a Zope</h1>
+
+<ul>
+  <li>
+    Un sitio web Zope está compuesto por objetos (Z objects) en lugar de ficheros de texto (ej:php)
+  </li>
+  <li>
+    Los objetos más básicos que ofrece Zope son: 
+    <ul>
+      <li><img src="pix/folder_icon.gif"/> carpetas, <img src="pix/dtml_icon.gif"/> documentos, <img src="pix/image_icon.gif"/> imagenes, <br/><img src="pix/zpt_icon.gif"/> plantillas, etc.
+      </li>
+    </ul>
+  </li>
+  <li>Existen multitud de productos que permiten utilizar nuevos tipos de objetos, por ejemplo:
+    <ul>
+      <li><img src="pix/zwiki_icon.gif"/> un wiki (Zwiki), <img src="pix/coreblog_icon.gif"/> un web log (CoreBlog), <br/><img src="pix/plone_icon.gif"/> un portal (Plone), etc.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+
+<div class="slide">
+
+<h1>Introducción a Zope</h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="pix/zmi.png" />
+<ul>
+  <li>
+    <a href="http://localhost:7080/manage">http://localhost:7080/manage</a>
+  </li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+<div class="slide">
+
+<h1>Referencias</h1>
+
+<ul>
+  <li>Imagenes:
+    <ul>
+      <li>
+http://www.zope.org/Documentation/Developer/Models/ ZODB/diagram/ZODB_Packaging_Packaging_Diag.gif
+      </li>
+      <li>
+http://animatedtv.about.com/library/graphics/frink.jpg  
+      </li>
+      <li>
+http://animatedtv.about.com/library/graphics/ralphnose.jpg
+      </li>
+      <li>
+      </li>
+    </ul>
+  </li>
+  <li>
+  </li>
+</ul>
+</div>
+
+
+</div>
+
+
+
+</body>
+
+</html>
+
