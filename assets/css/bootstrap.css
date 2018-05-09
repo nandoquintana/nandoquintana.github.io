@@ -3935,6 +3935,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -15px;
   margin-left: -15px;
 }
+
+@media (max-width: 767px) {
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    background: #fff;
+  }
+}
 @media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
