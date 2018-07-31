@@ -15,6 +15,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
         <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 
     </head>
     <body class="landing-page landing-page1">
@@ -31,7 +32,7 @@
                     <a href="http://www.nandoquintana.com">
                         <div class="logo-container">
                             <div class="logo">
-                                <img src="assets/img/nandoquintana-2.png" alt="Nando Quintana">
+                                <a id="profile_picture" href="assets/img/nandoquintana-2.png"><img src="assets/img/nandoquintana-3.png" alt="Nando Quintana"/></a>
                             </div>
                             <div class="brand">
                                 Nando Quintana
@@ -169,4 +170,14 @@ a strong background in <strong>Python</strong> backend and <strong>Javascript</s
     <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap.js" type="text/javascript"></script>
     <script src="assets/js/awesome-landing-page.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("a#profile_picture").fancybox();
+            
+        });
+    </script>
+
 </html>
