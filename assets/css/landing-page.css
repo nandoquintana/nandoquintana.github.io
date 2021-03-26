@@ -1005,13 +1005,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   text-align: center;
 }
 
+.landing-page .parallax .parallax-image a {
+  width: 100%;
+  height: auto;
+  float: right;
+}
+
 .landing-page .parallax .parallax-image img {
   height: auto;
   width: 100%;
 }
 
-.landing-page .parallax .parallax-image img.phone{
-  width: 80%;
+.landing-page .parallax .parallax-image img.terminal{
+  width: 100%;
   float: right;
 }
 
