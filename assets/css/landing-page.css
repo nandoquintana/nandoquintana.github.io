@@ -1057,6 +1057,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   text-shadow: 0 1px 5px rgba(0,0,0,0.5);
   font-size: 18px;
 }
+.landing-page .parallax .description a {
+  color: #4d4d4d;
+  text-decoration: underline;
+}
 
 .landing-page .parallax .buttons{
   width: 100%;
