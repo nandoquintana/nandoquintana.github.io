@@ -1,0 +1,29 @@
+@charset "utf-8";
+body{
+   font-family: "sans-serif";
+}
+#micontador{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#micontador .num{
+   display: flex;
+   flex-direction:column;
+   border: 1px solid black;
+   margin: 0 8px;
+}
+#micontador .num .dig{
+   overflow: hidden;
+   padding: 10px;
+}
+#micontador .num .dig span{
+   font-family: "Arial Black";
+   font-size: 4rem;
+   font-weight: 800px;
+   position: relative;
+}
+#micontador .label{
+   text-align: center;
+   border-top: 1px solid black;
+}
