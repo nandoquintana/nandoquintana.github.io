@@ -54,15 +54,26 @@
       min-height: 70px;
     }
 
-    .brand-link {
+    .brand {
       display: flex;
       align-items: center;
       margin-top: 10px;
+    }
+
+    .avatar-link {
+      display: block;
+      flex: 0 0 auto;
+      border-radius: 50%;
       color: #4d4d4d;
       text-decoration: none;
     }
 
-    .brand-link img {
+    .avatar-link:focus {
+      outline: 2px solid #4d4d4d;
+      outline-offset: 4px;
+    }
+
+    .avatar-link img {
       display: block;
       width: 50px;
       height: 50px;
@@ -73,6 +84,57 @@
       margin-left: 10px;
       font-size: 18px;
       line-height: 20px;
+    }
+
+    .brand-name-link {
+      color: #4d4d4d;
+      text-decoration: none;
+    }
+
+    .brand-name-link:hover,
+    .brand-name-link:focus {
+      color: #4d4d4d;
+      text-decoration: underline;
+    }
+
+    .photo-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, .78);
+    }
+
+    .photo-lightbox:target {
+      display: flex;
+    }
+
+    .photo-lightbox img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      max-width: min(874px, 100%);
+      max-height: calc(100vh - 48px);
+      border-radius: 50%;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, .45);
+    }
+
+    .photo-lightbox-close {
+      position: fixed;
+      inset: 0;
+      cursor: zoom-out;
+    }
+
+    .photo-lightbox-close span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
     }
 
     .nav-toggle {
@@ -228,7 +290,7 @@
         min-height: 60px;
       }
 
-      .brand-link img {
+      .avatar-link img {
         width: 40px;
         height: 40px;
       }
@@ -322,10 +384,12 @@
 <body>
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
-      <a class="brand-link" href="https://www.nandoquintana.com">
-        <img src="img/nandoquintana_round.png" alt="Nando Quintana">
-        <span class="brand-name">Nando Quintana</span>
-      </a>
+      <div class="brand">
+        <a class="avatar-link" href="#photo-lightbox" aria-label="Open larger photo of Nando Quintana">
+          <img src="img/nandoquintana_round.png" alt="Nando Quintana">
+        </a>
+        <a class="brand-name brand-name-link" href="https://www.nandoquintana.com">Nando Quintana</a>
+      </div>
 
       <details class="nav-toggle">
         <summary aria-label="Toggle navigation"><span class="menu-icon" aria-hidden="true"></span></summary>
@@ -348,6 +412,11 @@
   </header>
 
   <main>
+    <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-label="Larger photo of Nando Quintana">
+      <a class="photo-lightbox-close" href="#" aria-label="Close larger photo"><span>Close</span></a>
+      <img src="img/nandoquintana_round.png" alt="Nando Quintana">
+    </div>
+
     <section class="hero" aria-labelledby="intro-title">
       <div class="container hero-layout">
         <div class="resume-preview">
