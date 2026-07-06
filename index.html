@@ -1,144 +1,411 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/png" href="assets/img/favicon.ico">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Nando Quintana</title>
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-        <meta name="viewport" content="width=device-width" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nando Quintana, software engineer with more than 20 years of experience building internet products.">
+  <title>Nando Quintana</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
 
-        <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <link href="assets/css/landing-page.css?v=20260706-2" rel="stylesheet"/>
+    body {
+      margin: 0;
+      color: #4d4d4d;
+      font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        <!--     Fonts and icons     -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
-        <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    a {
+      color: #2ca8ff;
+    }
 
-    </head>
-    <body class="landing-page landing-page1">
-        <nav class="navbar navbar-transparent navbar-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar bar1"></span>
-                    <span class="icon-bar bar2"></span>
-                    <span class="icon-bar bar3"></span>
-                    </button>
-                    <a href="https://www.nandoquintana.com">
-                        <div class="logo-container">
-                            <div class="logo">
-                                <a id="profile_picture" href="assets/img/nandoquintana_round.png"><img src="assets/img/nandoquintana_round.png" alt="Nando Quintana"/></a>
-                            </div>
-                            <div class="brand">
-                                Nando Quintana
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="example" >
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="tel:+34658742581">
-                            <i class="fa fa-phone"></i>
-                            (+34) 658 742 581
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:email@nandoquinta.com">
-                            <i class="fa fa-envelope"></i>
-                            email@nandoquintana.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-        </nav>
-        <div class="wrapper">
-            <div class="parallax filter-gradient white" data-color="white">
-                <div class="parallax-background">
-                    <img class="parallax-background-image" src="assets/img/nandoquintana-wallpaper-2.jpg">
-                </div>
-                <div class= "container">
-                    <div class="row">
-                        <div class="col-md-5 hidden-xs hidden-sm">
-                            <div class="parallax-image">
-                                <a target="_blank" href="https://nandoquintana.github.io/nando_quintana_resume.pdf">
-                                    <img class="terminal" src="assets/img/console.png" style="margin-top: 88px;"/>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-md-offset-1">
-                            <div class="description">
-                                <h2>Nando Quintana</h2>
-                                <br>
-                                <p>Hello, I am a <strong>software engineer</strong> with more than 20 years of experience building internet products. I have a strong background in <strong>Python</strong> development, <strong>platform</strong> management and <strong>SQL</strong>, working mainly on <strong>data</strong> stuff.</p>
-                            <br>
-                            <p><a target="_blank" href="https://nandoquintana.github.io/nando_quintana_resume.pdf">Download my <strong>resume</strong></a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section section-gray section-clients">
-                <div class="container text-center">
-                    <div class="logos profile-links">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a class="profile-link" href="https://x.com/nandoquintana" target="_blank">
-                                    <img src="assets/img/x.svg" alt="" />
-                                    <span>X</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="profile-link" href="https://github.com/nandoquintana" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                    <span>GitHub</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="profile-link" href="https://www.linkedin.com/in/nandoquintana" target="_blank">
-                                    <i class="fa fa-linkedin"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="profile-link" href="https://instagram.com/nandoquintana" target="_blank">
-                                    <img src="assets/img/instagram.svg" alt="" />
-                                    <span>Instagram</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="profile-link" href="https://trifinium.tophistoria.com/" target="_blank" title="Trifinium, en topHistoria, con Joseba Abaitua y Mikel Martínez Areta">
-                                    <img src="https://secure.gravatar.com/blavatar/d8f9c6a7659192d065851b1edf7512aa493de44c73c75bf24dc60c6535499777?s=240" alt="Trifinium, en topHistoria, con Joseba Abaitua y Mikel Martínez Areta" width="48" height="48" />
-                                    <span>Trifinium</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    a:hover,
+    a:focus {
+      color: #109cff;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: min(100% - 30px, 970px);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 2;
+    }
+
+    .nav {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      min-height: 70px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      color: #4d4d4d;
+      text-decoration: none;
+    }
+
+    .brand-link img {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      margin-left: 10px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    .nav-toggle {
+      display: contents;
+    }
+
+    .nav-toggle summary {
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 25px 10px;
+      color: #4d4d4d;
+      text-decoration: none;
+      opacity: .8;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: #4d4d4d;
+      opacity: 1;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      fill: currentColor;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 630px;
+      overflow: hidden;
+      background: #ffbb28;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 5fr 6fr;
+      gap: 8.333%;
+    }
+
+    .resume-preview {
+      margin-top: 233px;
+      text-align: center;
+    }
+
+    .resume-preview img {
+      display: block;
+      width: 100%;
+    }
+
+    .intro {
+      margin-top: 200px;
+      padding: 5px;
+    }
+
+    .intro h1 {
+      margin: 30px 0 15px;
+      font-size: 40px;
+      font-weight: 200;
+      line-height: 1.1;
+    }
+
+    .intro p {
+      margin: 0 0 24px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .intro a {
+      color: #4d4d4d;
+      text-decoration: underline;
+    }
+
+    .profiles {
+      padding: 50px 0;
+      background: #eee;
+    }
+
+    .profile-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 64px;
+      margin: 48px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .profile-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .profile-link:hover,
+    .profile-link:focus {
+      color: #111;
+    }
+
+    .profile-link img,
+    .profile-link svg {
+      display: block;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 8px;
+      object-fit: contain;
+    }
+
+    .profile-link svg {
+      fill: currentColor;
+    }
+
+    @media (max-width: 991px) {
+      .hero-layout {
+        display: block;
+      }
+
+      .resume-preview {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .nav {
+        display: block;
+        position: relative;
+        min-height: 60px;
+      }
+
+      .brand-link img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-name {
+        margin-top: 0;
+      }
+
+      .nav-toggle {
+        display: block;
+        width: 100%;
+      }
+
+      .nav-toggle summary {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        display: flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .nav-toggle summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .menu-icon,
+      .menu-icon::before,
+      .menu-icon::after {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 2px;
+        background: #4d4d4d;
+        content: "";
+      }
+
+      .menu-icon {
+        position: relative;
+      }
+
+      .menu-icon::before {
+        position: absolute;
+        top: -7px;
+      }
+
+      .menu-icon::after {
+        position: absolute;
+        top: 7px;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        padding: 8px 0 12px 50px;
+      }
+
+      .nav-toggle[open] .nav-links {
+        display: block;
+      }
+
+      .nav-links a {
+        padding: 10px 0;
+      }
+
+      .hero {
+        min-height: 550px;
+      }
+
+      .intro {
+        margin-top: 130px;
+      }
+
+      .intro h1 {
+        font-size: 30px;
+      }
+
+      .profile-list {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Primary">
+      <a class="brand-link" href="https://www.nandoquintana.com">
+        <img src="img/nandoquintana_round.png" alt="Nando Quintana">
+        <span class="brand-name">Nando Quintana</span>
+      </a>
+
+      <details class="nav-toggle">
+        <summary aria-label="Toggle navigation"><span class="menu-icon" aria-hidden="true"></span></summary>
+        <ul class="nav-links">
+          <li>
+            <a href="tel:+34658742581">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.7.6 4.1.6.7 0 1.3.6 1.3 1.3v3.8c0 .7-.6 1.3-1.3 1.3C10.4 22 2 13.6 2 3.3 2 2.6 2.6 2 3.3 2h3.8c.7 0 1.3.6 1.3 1.3 0 1.4.2 2.8.6 4.1.1.4 0 .9-.3 1.2l-2.1 2.2z"/></svg>
+              <span>(+34) 658 742 581</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:email@nandoquintana.com">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.3-7.1 4.4c-.3.2-.7.2-1 0L4.4 8.3c-.5-.3-.6-.9-.3-1.4.3-.5.9-.6 1.4-.3L12 10.7l6.5-4.1c.5-.3 1.1-.2 1.4.3.3.5.2 1.1-.3 1.4z"/></svg>
+              <span>email@nandoquintana.com</span>
+            </a>
+          </li>
+        </ul>
+      </details>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="container hero-layout">
+        <div class="resume-preview">
+          <a href="nando_quintana_resume.pdf" target="_blank" rel="noopener">
+            <img src="img/console.png" alt="Preview of Nando Quintana's resume">
+          </a>
         </div>
 
-    </body>
-    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.js" type="text/javascript"></script>
-    <script src="assets/js/awesome-landing-page.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+        <div class="intro">
+          <h1 id="intro-title">Nando Quintana</h1>
+          <p>Hello, I am a <strong>software engineer</strong> with more than 20 years of experience building internet products. I have a strong background in <strong>Python</strong> development, <strong>platform</strong> management and <strong>SQL</strong>, working mainly on <strong>data</strong> stuff.</p>
+          <p><a href="nando_quintana_resume.pdf" target="_blank" rel="noopener">Download my <strong>resume</strong></a>.</p>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        $(document).ready(function() {
-
-            $("a#profile_picture").fancybox();
-
-        });
-    </script>
-
+    <section class="profiles" aria-label="Profile links">
+      <div class="container">
+        <ul class="profile-list">
+          <li>
+            <a class="profile-link" href="https://x.com/nandoquintana" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.7l-5.2-6.8L5.6 22H2.3l7.7-8.8L1.8 2h6.9l4.7 6.2L18.9 2zm-1.2 17.9h1.8L7.7 4H5.8l11.9 15.9z"/>
+              </svg>
+              <span>X</span>
+            </a>
+          </li>
+          <li>
+            <a class="profile-link" href="https://github.com/nandoquintana" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .5C5.6.5.5 5.7.5 12.1c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.9 2.1 3.2 1.5.1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4 1 0 2 .1 2.9.4 2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.4.5 12 .5z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a class="profile-link" href="https://www.linkedin.com/in/nandoquintana" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v15h-4V8zm7.5 0h3.8v2.1h.1c.5-1 1.9-2.3 4.1-2.3 4.4 0 5.2 2.9 5.2 6.7V23h-4v-7.5c0-1.8 0-4.1-2.5-4.1s-2.9 2-2.9 4v7.6h-4V8z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a class="profile-link" href="https://instagram.com/nandoquintana" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17" cy="7" r="1.3"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a class="profile-link" href="https://trifinium.tophistoria.com/" target="_blank" rel="noopener" title="Trifinium, en topHistoria, con Joseba Abaitua y Mikel Martinez Areta">
+              <img src="img/trifinium.png" alt="" aria-hidden="true" width="48" height="48">
+              <span>Trifinium</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
