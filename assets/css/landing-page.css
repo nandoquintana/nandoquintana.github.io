@@ -1101,10 +1101,59 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     margin: 0px auto;
     padding-top: 48px;
   }
-   .landing-page .logos li{
+  .landing-page .logos li{
     display: inline-block;
     margin: 17px 17px;
    }
+
+  .landing-page .profile-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .landing-page .profile-links li {
+    margin: 0;
+  }
+
+  .landing-page .profile-link {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    color: #4d4d4d;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 500;
+    height: 84px;
+    justify-content: center;
+    line-height: 20px;
+    padding: 12px;
+    text-align: center;
+    width: 132px;
+  }
+
+  .landing-page .profile-link:hover,
+  .landing-page .profile-link:focus {
+    border-color: #2ca8ff;
+    color: #2ca8ff;
+  }
+
+  .landing-page .profile-link img,
+  .landing-page .profile-link .fa {
+    display: block;
+    height: 32px;
+    margin-bottom: 8px;
+    object-fit: contain;
+    width: 32px;
+  }
+
+  .landing-page .profile-link .fa {
+    font-size: 28px;
+    line-height: 32px;
+  }
 
    .landing-page .section-presentation {
     overflow: hidden;
